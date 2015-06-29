@@ -10,6 +10,37 @@
 ####  下载项目源码
 - 1、[game-server源码](https://github.com/pengqiuyuan/game-server.git) 或者svn上下载源码
 
+####  修改host、port
+- 1、/game-server/src/main/resources/application.properties 
+
+```
+jdbc.driver=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql://127.0.0.1:3306/game_server?useUnicode=true&characterEncoding=utf-8
+jdbc.username=root
+jdbc.password=
+
+imagepath=/usr/local/share/www
+imgUrl=http://127.0.0.1
+
+#execlpath=/Users/apple/share/www/execl
+excelpath=/home/dev/share/www/excel
+excelUrl=http://10.0.10.251/excel
+
+#billing
+list_url=http://10.0.10.105:40000/api/gameserver/v1/gift/index
+save_url=http://10.0.10.105:40000/api/gameserver/v1/gift/add
+del_url=http://10.0.10.105:40000/api/gameserver/v1/gift/delete
+export_url=http://10.0.10.105:40000/api/gameserver/v1/gift/export
+review_url=http://10.0.10.105:40000/api/gameserver/v1/gift/review
+search_url=http://10.0.10.105:40000/api/gameserver/v1/gift/search
+searchgift_url=http://10.0.10.105:40000/api/gameserver/v1/gift/searchgift
+```
+- 2、/game-server/src/main/webapp/manage/count/config.js
+
+```
+elasticsearch: "http://182.92.69.21:9200",
+```
+
 ####  打包war
 - 1、进入项目根目录，pom.xml所在目录
 - 2、执行编译 mvn compile
