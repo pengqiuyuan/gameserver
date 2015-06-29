@@ -4,6 +4,6 @@
 * [礼品卡API](billing/billing_api.md)
 * [部署](installation/installation.md)
 * [架构](arch/arch.md)
-   * 系统层架构图
+   * [系统层架构图](acch/system/system.md)
    * 应用层架构图
 
