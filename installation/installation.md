@@ -4,7 +4,7 @@
 ####  1、环境配置
 - 1、git version 1.9.5 (Apple Git-50.3)（本地需要）
 - 2、Apache Maven 3.2.5（本地需要）
-- 3、jdk 1.7 以上 (Java version: 1.7.0_75)（本地需要）
+- 3、jdk 1.7 以上 (Java version: 1.7.0_75)
 - 4、[jetty下载](http://download.eclipse.org/jetty/stable-8/dist/jetty-distribution-8.1.17.v20150415.zip) ,解压 upzip jetty-distribution-8.1.17.v20150415.zip
 
 ####  2、下载项目源码
