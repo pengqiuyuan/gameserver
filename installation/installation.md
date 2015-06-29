@@ -41,7 +41,7 @@ searchgift_url=http://10.0.10.105:40000/api/gameserver/v1/gift/searchgift
 elasticsearch: "http://182.92.69.21:9200",
 ```
 
-####  4、打包war
+####  4、编译、打包war
 - 1、进入项目根目录，pom.xml所在目录
 - 2、执行编译 mvn compile
 - 3、编译成功后，打包 mvn clean install -Dmaven.test.skip=true
