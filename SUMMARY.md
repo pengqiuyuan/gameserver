@@ -5,4 +5,5 @@
 * [部署](installation/installation.md)
 * [架构](arch/arch.md)
    * 系统层架构图
+   * 应用层架构图
 
