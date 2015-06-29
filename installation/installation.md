@@ -1,16 +1,16 @@
 部署环境
 -------------
 
-####  环境配置
+####  1、环境配置
 - 1、git version 1.9.5 (Apple Git-50.3)
 - 2、Apache Maven 3.2.5
 - 3、jdk 1.7 以上 (Java version: 1.7.0_75)
 - 4、[jetty下载](http://download.eclipse.org/jetty/stable-8/dist/jetty-distribution-8.1.17.v20150415.zip) ,解压 upzip jetty-distribution-8.1.17.v20150415.zip
 
-####  下载项目源码
+####  2、下载项目源码
 - 1、[game-server源码](https://github.com/pengqiuyuan/game-server.git) 或者svn上下载源码
 
-####  修改host、port
+####  3、修改host、port
 - 1、/game-server/src/main/resources/application.properties 
 
 ```
@@ -41,13 +41,13 @@ searchgift_url=http://10.0.10.105:40000/api/gameserver/v1/gift/searchgift
 elasticsearch: "http://182.92.69.21:9200",
 ```
 
-####  打包war
+####  4、打包war
 - 1、进入项目根目录，pom.xml所在目录
 - 2、执行编译 mvn compile
 - 3、编译成功后，打包 mvn clean install -Dmaven.test.skip=true
 - 4、打包成功后 game-server/target/game-server.war 目录下会生成game-server.war文件，这个就是我们需要部署的项目war包
 
-####  上传war包到指定服务器
+####  5、上传war包到指定服务器
 - 1、解压jetty，修改web容器名字为game-server
     - upzip jetty-distribution-8.1.17.v20150415.zip
     - mv jetty-distribution-8.1.17.v20150415 game-server
