@@ -63,7 +63,18 @@ elasticsearch: "http://182.92.69.21:9200",
 
 
 
+And flow charts like this:
 
+``` flow
+st=>start: Start
+e=>end
+op=>operation: My Operation
+cond=>condition: Yes or No?
+
+st->op->cond
+cond(yes)->e
+cond(no)->op
+``` 
   
 ### Support StackEdit
 
