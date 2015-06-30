@@ -35,11 +35,16 @@ review_url=http://10.0.10.105:40000/api/gameserver/v1/gift/review
 search_url=http://10.0.10.105:40000/api/gameserver/v1/gift/search
 searchgift_url=http://10.0.10.105:40000/api/gameserver/v1/gift/searchgift
 ```
-- 2、/game-server/src/main/webapp/manage/count/config.js
+- 2、/game-server/src/main/webapp/manage/count/config.js(查看代码说明)
 
 ```
-elasticsearch: "http://182.92.69.21:9200",
+//测试使用
+//elasticsearch: "http://"+window.location.hostname+":9200",
+	 
+//线上使用 nginx 80 port 代理9200 
+elasticsearch: "http://"+window.location.hostname+"/port",
 ```
+- 3、/game-server/src/main/webapp/manage/count/config.js(查看代码说明)
 
 ####  4、编译、打包war
 - 1、进入项目根目录，pom.xml所在目录
