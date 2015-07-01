@@ -47,11 +47,16 @@ elasticsearch: "http://"+window.location.hostname+"/port",
 - 3、/game-server/src/main/webapp/manage/count/vendor/elasticsearch.angular.js(查看代码说明)
 
 ```
-//测试使用
-//elasticsearch: "http://"+window.location.hostname+":9200",
-    	 
-//线上使用 nginx 80 port 代理9200 
-elasticsearch: "http://"+window.location.hostname+"/port",
+  if (this.port !== Host.defaultPorts[this.protocol]) {
+
+	//没有使用nginx 使用9200
+    //port = ':' + this.port;
+
+	//使用nginx port 替代9200
+	port = '/port';
+	this.host = '182.92.69.21';
+
+  }
 
 ```
 
