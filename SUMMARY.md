@@ -8,5 +8,5 @@
    * [系统层架构](arch/system/system.md)
    * [应用安全](arch/security/security.md)
 * [Es方案](es/esfang_an.md)
-   * [index](es/index/index.md)
+   * [索引设计方案](es/index/index.md)
 
