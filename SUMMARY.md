@@ -7,5 +7,5 @@
    * [应用层架构图](arch/app/app.md)
    * [系统层架构](arch/system/system.md)
    * [应用安全](arch/security/security.md)
-* Es方案
+* [Es方案](es/esfang_an.md)
 
