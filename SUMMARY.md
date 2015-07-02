@@ -6,5 +6,5 @@
 * [架构](arch/arch.md)
    * [系统层架构图](acch/system/system.md)
    * [应用层架构图](arch/app/app.md)
-   * 系统层架构
+   * [系统层架构](arch/system.md)
 
