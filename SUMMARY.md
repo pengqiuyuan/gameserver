@@ -9,6 +9,6 @@
    * [应用安全](arch/security/security.md)
 * [Es方案](es/esfang_an.md)
    * [索引设计方案](es/index/index.md)
-   * 索引设计方案_type_1
+   * [索引设计方案_type_1](es/index_1/index_type_1.md)
    * 索引设计方案_type_2
 
