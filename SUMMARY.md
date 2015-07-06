@@ -11,5 +11,5 @@
    * [索引设计方案](es/index/index.md)
    * [索引设计方案_type_1](es/index_1/index_type_1.md)
    * [索引设计方案_type_2](es/index_2/index_type_2.md)
-* [Gmserver设计](common/common.md)
+* [Gmserver设计](gmserver/gm.md)
 
