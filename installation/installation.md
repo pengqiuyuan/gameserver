@@ -11,7 +11,7 @@
 - 1、[game-server源码](https://github.com/pengqiuyuan/game-server.git) 或者svn上下载源码
 
 ####  3、修改host、port
-- 1、/game-server/src/main/resources/application.properties 
+- 1、/game-server/src/main/resources/application.properties
 
 ```
 jdbc.driver=com.mysql.jdbc.Driver
@@ -40,8 +40,8 @@ searchgift_url=http://10.0.10.105:40000/api/gameserver/v1/gift/searchgift
 ```
 //测试使用
 //elasticsearch: "http://"+window.location.hostname+":9200",
-	 
-//线上使用 nginx 80 port 代理9200 
+
+//线上使用 nginx 80 port 代理9200
 elasticsearch: "http://"+window.location.hostname+"/port",
 ```
 - 3、/game-server/src/main/webapp/manage/count/vendor/elasticsearch.angular.js(查看代码说明)
@@ -74,14 +74,14 @@ elasticsearch: "http://"+window.location.hostname+"/port",
 
 
 - 2、如：（game-server.war在game-server/target 目录下）
-  - scp ./game-server/target/game-server.war root@10.0.29.249:/home/dev/game-server/webapps/ 
-  
+  - scp ./game-server/target/game-server.war root@10.0.29.249:/home/dev/game-server/webapps/
+
 
 - 3、如：启动jetty，注意启动jetty之前，需要确保elasticsearch服务已经启动
-  - game-server 目录下执行 bin/jetty.sh restart 
+  - game-server 目录下执行 bin/jetty.sh restart
   - cd logs 查看日志确保服务正常启动 tail －f **.log
 
 
 
 
-  
+

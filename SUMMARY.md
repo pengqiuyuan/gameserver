@@ -1,7 +1,9 @@
 # Summary
 
 * [序](README.md)
-* [礼品卡API](billing/billing_api.md)
+* [API](billing/billing_api.md)
+   * [礼品卡api](billing/api.md)
+   * [fb项目api](billing/fbapi.md)
 * [部署](installation/installation.md)
 * [架构](arch/arch.md)
    * [应用层架构图](arch/app/app.md)

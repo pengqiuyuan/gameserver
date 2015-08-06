@@ -15,8 +15,8 @@ post /api/gameserver/v1/gift/add
 	"server":["1","2",...],
 	"playerId":["1","2",...],       //限制玩家Id GUID
 	"category":"1",            //礼品码类型
-	"number":"1000",          //礼品码生成数量  
-	"giftItems":[{              //道具 
+	"number":"1000",          //礼品码生成数量
+	"giftItems":[{              //道具
 		"id":"1",	             //金币Id
 		"number":"9999"      //金币数量
 	},{
@@ -39,24 +39,24 @@ post /api/gameserver/v1/gift/add
 
 ```
 GET /api/gameserver/v1/gift/index
-参数 
+参数
      category: 1 (超级管理员) 0(普通GM) （0、普通用户此项目下当前gm的礼品卡列表    1、超级管理员此项目下下所有gm的礼品卡列表）
-     gameId: 项目Id 
-     userId: GMId 
+     gameId: 项目Id
+     userId: GMId
 响应
 [{
 	"giftId":"1",               //礼品卡id
 	"userId":"1",              //礼品卡生成人
 	"gameId":"1",            //项目Id
-	"number":"1000",         //礼品码生成数量  
-	"giftItems":[{             //道具 
+	"number":"1000",         //礼品码生成数量
+	"giftItems":[{             //道具
 		"id":"1",	            //金币Id
 		"number":"9999"     //金币数量
 
 	},{
 		"id":"2",	                    //钻石Id
 		"number":"9999"             //钻石数量
-	},...],                		
+	},...],
 	"begindate":1423524111000,     //礼品卡生效时间 Long 毫秒
 	"enddate":1423787228000，     //礼品卡结束时间  Long  毫秒
 	"status":"0"                      //礼品卡状态 0审核中 1已同意 2被拒绝
@@ -93,7 +93,7 @@ GET /api/gameserver/v1/gift/delete
 -------------
 
 ```
-GET /api/gameserver/v1/gift/export 
+GET /api/gameserver/v1/gift/export
 参数 giftId 礼品卡Id
 响应
 [
@@ -132,8 +132,8 @@ GET GET /api/gameserver/v1/gift/review
 
 ```
 GET GET GET /api/gameserver/v1/gift/search
-参数 status 查询方式 0为GUID 
-                    1为礼品码Id 
+参数 status 查询方式 0为GUID
+                    1为礼品码Id
 		            2为礼品卡Id
      query  1  FB1234567890 1
      gameId: 项目Id
@@ -146,7 +146,7 @@ status 为 0
 	"userId":"1",             //礼品卡生成人
 	"guid":"1",               //GUID
 	"platformId":"1",             //平台Id
-	"begindate":1423524111000,    //使用时间 
+	"begindate":1423524111000,    //使用时间
 	"channelId":"123"               //渠道Id
 },...]
 
@@ -159,7 +159,7 @@ status 为 1
 	"userId":"1",             //礼品卡生成人
 	"guid":"1",               //GUID
 	"platformId":"1",             //平台Id
-	"begindate":1423524111000,    //使用时间 
+	"begindate":1423524111000,    //使用时间
 	"channelId":"123"               //渠道Id
 	"status":"2"
 }]
@@ -190,14 +190,14 @@ GET /api/gameserver/v1/gift/searchgift
 	"giftId":"1",                       //礼品卡id
 	"userId":"1",                      //礼品卡生成人
 	"gameId":"1",                    //项目Id
-	"number":"1000",                 //礼品码生成数量  
-	"giftItems":[{                     //道具 
+	"number":"1000",                 //礼品码生成数量
+	"giftItems":[{                     //道具
 		"id":"1",	                     //金币Id
 		"number":"9999"              //金币数量
 	},{
 		"id":"2",	                     //钻石Id
 		"number":"9999"              //钻石数量
-	},...],                		
+	},...],
 	"begindate":1423524111000,      //礼品卡生效时间 Long 毫秒
 	"enddate":1423787228000，      //礼品卡结束时间  Long  毫秒
 	"status":"0"                       //礼品卡状态 0审核中 1已同意 2被拒绝
