@@ -4,7 +4,7 @@
 ####  1、环境配置
 - 1、git version 1.9.5 (Apple Git-50.3)（本地需要）
 - 2、Apache Maven 3.2.5（本地需要）
-- 3、jdk 1.7 以上 (Java version: 1.7.0_75)
+- 3、jdk 1.7 以上 (Java version: 1.7.0_75)（本地、生产需要）
 - 4、[jetty下载](http://download.eclipse.org/jetty/stable-8/dist/jetty-distribution-8.1.17.v20150415.zip) ,解压 upzip jetty-distribution-8.1.17.v20150415.zip
 
 ####  2、下载项目源码
@@ -15,9 +15,13 @@
 
 ```
 jdbc.driver=com.mysql.jdbc.Driver
-jdbc.url=jdbc:mysql://127.0.0.1:3306/game_server?useUnicode=true&characterEncoding=utf-8
+jdbc.url=jdbc:mysql://10.0.29.251:3306/game_server?useUnicode=true&characterEncoding=utf-8
 jdbc.username=root
-jdbc.password=
+jdbc.password=123456
+
+#connection pool settings
+jdbc.pool.maxIdle=10
+jdbc.pool.maxActive=50
 
 imagepath=/usr/local/share/www
 imgUrl=http://127.0.0.1
@@ -27,13 +31,10 @@ excelpath=/home/dev/share/www/excel
 excelUrl=http://10.0.10.251/excel
 
 #billing
-list_url=http://10.0.10.105:40000/api/gameserver/v1/gift/index
-save_url=http://10.0.10.105:40000/api/gameserver/v1/gift/add
-del_url=http://10.0.10.105:40000/api/gameserver/v1/gift/delete
-export_url=http://10.0.10.105:40000/api/gameserver/v1/gift/export
-review_url=http://10.0.10.105:40000/api/gameserver/v1/gift/review
-search_url=http://10.0.10.105:40000/api/gameserver/v1/gift/search
-searchgift_url=http://10.0.10.105:40000/api/gameserver/v1/gift/searchgift
+billing_url=http://10.0.10.105:40000
+
+#gm
+gm_url=http://playground.apistudio.io/try/346bf9ed-3939-4c88-bcfb-a24a7339abb2
 ```
 - 2、/game-server/src/main/webapp/manage/count/config.js(查看代码说明)
 
@@ -62,10 +63,22 @@ elasticsearch: "http://"+window.location.hostname+"/port",
 
 
 ####  4、编译、打包war
+
+- 本地项目编译打包
+
+```
 - 1、进入项目根目录，pom.xml所在目录
 - 2、执行编译 mvn compile
 - 3、编译成功后，打包 mvn clean install -Dmaven.test.skip=true
 - 4、打包成功后 game-server/target/game-server.war 目录下会生成game-server.war文件，这个就是我们需要部署的项目war包
+```
+- 本地启动项目
+
+```
+- 1、进入项目根目录，pom.xml所在目录
+- 2、mvn clean install -Dmaven.test.skip=true
+- 4、启动 mvn clean jetty:run
+```
 
 ####  5、上传war包到指定服务器
 - 1、解压jetty，修改web容器名字为game-server
