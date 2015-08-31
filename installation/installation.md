@@ -5,7 +5,7 @@
 - 1、git version 1.9.5 (Apple Git-50.3)（本地需要）
 - 2、Apache Maven 3.2.5（本地需要）
 - 3、jdk 1.7 以上 (Java version: 1.7.0_75)（本地、生产需要）
-- 4、[jetty下载](http://download.eclipse.org/jetty/stable-8/dist/jetty-distribution-8.1.17.v20150415.zip) ,解压 upzip jetty-distribution-8.1.17.v20150415.zip
+- 4、[jetty下载](http://download.eclipse.org/jetty/7.6.17.v20150415/dist/jetty-distribution-7.6.17.v20150415.tar.gz) ,解压 tar -xvf jetty-distribution-7.6.17.v20150415.tar.gz
 
 ####  2、下载项目源码
 - 1、[game-server源码](https://github.com/pengqiuyuan/game-server.git) 或者svn上下载源码
