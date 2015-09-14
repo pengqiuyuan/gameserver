@@ -87,8 +87,10 @@ elasticsearch: "http://"+window.location.hostname+"/port",
 
 
 - 2、如：（game-server.war在game-server/target 目录下）
-  - scp ./game-server/target/game-server.war root@10.0.29.249:/home/dev/game-server/webapps/
+  - scp ./game-server/target/game-server.war root@10.0.29.249:/home/dev/game-server/webapps/root
 
+- 4、解压
+  - jar -xvf game-server.war
 
 - 3、如：启动jetty，注意启动jetty之前，需要确保elasticsearch服务已经启动
   - game-server 目录下执行 bin/jetty.sh restart
